@@ -1,6 +1,7 @@
 package com.client.sevice;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,8 +16,8 @@ public class ClientService implements IClientService {
     @Autowired
     private IClientRepository clientRepository;
 
-    List<Client> clients = List.of(
-            new Client(null,
+    static List<Client> clients = List.of(
+            new Client(UUID.randomUUID().toString(),
                     "C",
                     "23445322",
                     "Luis",

@@ -18,7 +18,7 @@ public class Client implements Serializable {
 
     @Id
     @GeneratedValue
-    private String id = UUID.randomUUID().toString();
+    private String id;
 
     private String documentType;
     private String documentNumber;
